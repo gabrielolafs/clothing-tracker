@@ -16,3 +16,4 @@ class Garment(Base):
     times_needed_before_wash = Column(Integer, default=1)
     specific_attributes = Column(JSON)  # Store extra info like {"neckline": "crew", "length_in": 28.5}
     created_at = Column(TIMESTAMP, default=datetime.datetime.utcnow)
+    last_time_worn = Column(TIMESTAMP, nullable=True)

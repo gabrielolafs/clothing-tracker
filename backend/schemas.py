@@ -29,11 +29,13 @@ class GarmentUpdate(BaseModel):
     times_since_washed: Optional[int] = None
     times_needed_before_wash: Optional[int] = None
     specific_attributes: Optional[dict] = None
+    last_time_worn: Optional[datetime] = None
 
 # For responses (includes id and created_at)
 class GarmentResponse(GarmentBase):
     id: int
     created_at: datetime
+    last_time_worn: datetime
 
     class Config:
         from_attributes = True  # Allows SQLAlchemy models to work
